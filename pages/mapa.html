@@ -1,0 +1,189 @@
+<!-- Al igual que index, mapa tiene que tener un head y body, además de especificar que está descripto en HTML -->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- head time -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa</title>
+    <!-- Styling -->
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<!-- body time -->
+<body>
+    <!-- se repiten el header y el footer de antes. -->
+
+
+
+    <!-- header time -->
+    <section id="header">
+        <div class="header">
+            <span id="leftSide">
+                <span id="headerLogo">
+                    <!-- Añado el logo -->
+                    <img src="../img/subte_small.png" alt="header_logo" class="header_image">
+                </span>
+                <span id="headerTitle">
+                    <!-- Añado el título al lado del logo -->
+                    Subterráneos de Buenos Aires
+                </span>
+            </span>
+            <span id="rightSide">
+                <span id="text">
+                    <!-- Añado el primer link (Inicio) -->
+                    <a href="index.html">
+                        Inicio
+                    </a>
+                </span>
+                <span id="text">
+                    <!-- Añado el segundo link (Estado ME) -->
+                    <a href="estado_me.html">
+                        Estado ME
+                    </a>
+                </span>
+                <span id="text">
+                    <!-- Añado el tercer link (Mapa) -->
+                    <a href="mapa.html">
+                        Mapa
+                    </a>
+                </span>
+                <span id="text">
+                    <!-- Añado el cuarto link (Búsqueda) -->
+                    <a href="busqueda.html">
+                        Búsqueda
+                    </a>
+                </span>
+                <span id="text">
+                    <!-- Añado el quinto link (Contacto) -->
+                    <a href="contacto.html">
+                        Contacto
+                    </a>
+                </span>
+            </span>
+        </div>
+    </section>
+
+
+
+    <!-- Luego del "header" continúo con el título -->
+    <section id="mapa_title">
+        <!-- como habrá una sección del mismo estilo en distintas páginas, pienso en darle el mismo estilo a las 3, eso implica mismo ID para el CSS-->
+        <div class="firstTitleHeader">
+            <h1>
+                Mapa
+            </h1>
+        </div>
+        <div class="divisor">
+            <!-- Acá hay un divisor horizontal -->
+            <hr>
+        </div>
+    </section>
+
+
+
+    <!-- A continuación un mapa que muestra las estaciones, al hoverear el mouse por cada estación te debería mostrar una lista de los medios de esa estación. -->
+    <section id="mapa_mapa">
+        <div class="map_container">
+            <img src="../img/mapa_red_subte.jpg" alt="Welcome image" width=90% >
+            <!-- en CSS especificaré que tenga full width y la altura -->
+        </div>
+    </section>
+
+
+
+    <!-- footer time -->
+    <section id="footer">
+        <!-- Primero viene el logo a la izquierda, y una serie de links de navegación a la derecha (por ahora de prueba) -->
+        <div class="footerStart">
+            <span class="footerLogo">
+                <img src="../img/subte_big.png">
+            </span>
+
+            <span class="navigationLinks">
+                <div class="title">
+                    Lorem ipsum
+                </div>
+                <div>
+                    Adipiscing
+                </div>
+                <div>
+                    Tempo
+                </div>
+                <div>
+                    Et dolore
+                </div>
+            </span>
+
+            <span class="navigationLinks">
+                <div class="title">
+                    Dolor sit amet
+                </div>
+                <div>
+                    Elit, sed do
+                </div>
+                <div>
+                    Incididunt
+                </div>
+                <div>
+                    magna
+                </div>
+            </span>
+
+            <span class="navigationLinks">
+                <div class="title">
+                    Consectetur
+                </div>
+                <div>
+                    Eiusmod
+                </div>
+                <div>
+                    Ut labore
+                </div>
+                <div>
+                    Aliqua
+                </div>
+            </span>
+        </div>
+        <!-- Luego viene una línea divisoria -->
+        <div class="divisor">
+            <hr>
+        </div>
+        <!-- Finalmente vienen los créditos y los links de las redes sociales -->
+        <div class="footerEnd">
+            <span id="leftSide">
+                &copy; SBASE 2023.
+            </span>
+            <span id="rightSide">
+                <span id="footerText">
+                    Nuestras redes:
+                </span>
+                <span id="footerImgLink">
+                    <a href="https://www.Facebook.com">
+                        <img src="../img/facebook_png.png" alt="Facebook" style="width:42px;height:42px;">
+                    </a>
+                </span>
+                <span id="footerImgLink">
+                    <a href="https://www.Instagram.com">
+                        <img src="../img/instagram_png.png" alt="Instagram" style="width:42px;height:42px;">
+                    </a>
+                </span>
+                <span id="footerImgLink">
+                    <a href="https://www.Linkedin.com">
+                        <img src="../img/linkedin_png.png" alt="Linkedin" style="width:42px;height:42px;">
+                    </a>
+                </span>
+                <span id="footerImgLink">
+                    <a href="https://www.Twitter.com">
+                        <img src="../img/twitter_png.png" alt="Twitter" style="width:42px;height:42px;">
+                    </a>
+                </span>
+            </span>
+        </div>
+    </section>
+
+    <!-- Al terminar la última sección cierro el body y el html -->
+</body>
+</html>

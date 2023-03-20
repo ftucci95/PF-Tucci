@@ -1,0 +1,198 @@
+<!-- Así inicia mi sitio web, con la página index.html, que por defecto es mi página de inicio. Estará descripta en HTML así que... -->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- En esta parte va el head, donde especifico algunos detalles -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <!-- Styling -->
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<!-- Luego va la parte más sabrosa: el body, dónde está la mayoría de código y contenido de la página -->
+<body class="index">
+    <!-- Dentro del body voy a organizar todo en distintas secciones consecutivas. Esta estructura general la respetaré dentro de todo el sitio web. De esta forma puedo aprovechar
+    bloques repetitivos, como el header y el footer; además de diseñar en forma modular y facilitar el debugging y la división del proyecto en tareas pequeñas y sencillas. -->
+
+
+
+    <!-- Añado una sección "header" que estará en todas las páginas por igual y contiene el logo y la navegación hacia otras páginas. -->
+    <section id="header">
+        <div class="header">
+            <span id="leftSide">
+                <span id="headerLogo">
+                    <!-- Añado el logo -->
+                    <img src="../img/subte_small.png" alt="header_logo" class="header_image">
+                </span>
+                <span id="headerTitle">
+                    <!-- Añado el título al lado del logo -->
+                    Subterráneos de Buenos Aires
+                </span>
+            </span>
+
+            <span id="rightSide">
+                <span id="text">
+                    <!-- Añado el primer link (Inicio) -->
+                    <a href="index.html">
+                        Inicio
+                    </a>
+                </span>
+                <span id="text">
+                    <!-- Añado el segundo link (Estado ME) -->
+                    <a href="estado_me.html">
+                        Estado ME
+                    </a>
+                </span>
+                <span id="text">
+                    <!-- Añado el tercer link (Mapa) -->
+                    <a href="mapa.html">
+                        Mapa
+                    </a>
+                </span>
+                <span id="text">
+                    <!-- Añado el cuarto link (Búsqueda) -->
+                    <a href="busqueda.html">
+                        Búsqueda
+                    </a>
+                </span>
+                <span id="text">
+                    <!-- Añado el quinto link (Contacto) -->
+                    <a href="contacto.html">
+                        Contacto
+                    </a>
+                </span>
+            </span>
+        </div>
+    </section>
+
+    <!-- Luego del "header" continúo con una imagen en el inicio -->
+    <div class="inicio_img">
+        <img src="../img/img_inicio2.jpg" alt="Welcome image" class="myImage">
+        <!-- en CSS especificaré que tenga full width y la altura -->
+    </div>
+
+
+
+    <!-- A continuación un texto explicando el propósito del sitio web -->
+    <div class="inicio_explanation">
+        <span id= "explanation_left">
+            <span>
+                <img src="../img/img_inicio.jpg" alt="Explain ornament" max-width="700px" class="image_format">
+                <!-- en CSS especificaré: width 45% del full width; padding 5% full width en top bottom, left & right side; float:left -->
+            </span>
+        </span>
+        <span id="explanation_right">
+            <!-- Ahora hago el texto de la derecha, que tiene un título y un texto debajo -->
+            <div id="title">
+                Sed ut perspiciatis unde omnis
+                <!-- A este heading le voy a especificar font-size, font-family, font-color, margin, display -->
+            </div>
+            <div id="text">
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
+                <!-- A este span le voy a especificar font-size, family, color, margin, display, wrapping? -->
+            </div> 
+        </span>
+    </div>
+
+
+
+    <!-- Es momento de añadir el footer, nuevamente estará en todas las páginas del sitio. -->
+    <section id="footer">
+        <!-- Primero viene el logo a la izquierda, y una serie de links de navegación a la derecha (por ahora de prueba) -->
+        <div class="footerStart">
+            <span class="footerLogo">
+                <img src="../img/subte_big.png">
+            </span>
+            
+            
+
+            <span class="navigationLinks">
+                <div class="title">
+                    Lorem ipsum
+                </div>
+                <div>
+                    Adipiscing
+                </div>
+                <div>
+                    Tempo
+                </div>
+                <div>
+                    Et dolore
+                </div>
+            </span>
+
+            <span class="navigationLinks">
+                <div class="title">
+                    Dolor sit amet
+                </div>
+                <div>
+                    Elit, sed do
+                </div>
+                <div>
+                    Incididunt
+                </div>
+                <div>
+                    magna
+                </div>
+            </span>
+
+            <span class="navigationLinks">
+                <div class="title">
+                    Consectetur
+                </div>
+                <div>
+                    Eiusmod
+                </div>
+                <div>
+                    Ut labore
+                </div>
+                <div>
+                    Aliqua
+                </div>
+            </span>
+            <!-- <span id="rightSpacer">
+            </span> -->
+        </div>
+        <!-- Luego viene una línea divisoria -->
+        <div class="divisor">
+            <hr>
+        </div>
+        <!-- Finalmente vienen los créditos y los links de las redes sociales -->
+        <div class="footerEnd">
+            <span id="leftSide">
+                &copy; SBASE 2023.
+            </span>
+            <span id="rightSide">
+                <span id="footerText">
+                    Nuestras redes:
+                </span>
+                <span id="footerImgLink">
+                    <a href="https://www.Facebook.com">
+                        <img src="../img/facebook_png.png" alt="Facebook" style="width:42px;height:42px;">
+                    </a>
+                </span>
+                <span id="footerImgLink">
+                    <a href="https://www.Instagram.com">
+                        <img src="../img/instagram_png.png" alt="Instagram" style="width:42px;height:42px;">
+                    </a>
+                </span>
+                <span id="footerImgLink">
+                    <a href="https://www.Linkedin.com">
+                        <img src="../img/linkedin_png.png" alt="Linkedin" style="width:42px;height:42px;">
+                    </a>
+                </span>
+                <span id="footerImgLink">
+                    <a href="https://www.Twitter.com">
+                        <img src="../img/twitter_png.png" alt="Twitter" style="width:42px;height:42px;">
+                    </a>
+                </span>
+            </span>
+        </div>
+    </section>
+
+    <!-- Al terminar la última sección cierro el body y el html -->
+</body>
+</html>

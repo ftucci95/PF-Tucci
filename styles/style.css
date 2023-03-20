@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap');
+
+/* Empieza la definición del body, usado por todas las páginas. */
+
+/* el body, contenedor de todos estos bloques, no debería tener border margin ni padding. Además SIEMPRE SERÁ un grid container*/
+.index
+{
+    margin: 0px;
+    border: 0px solid;
+    padding: 0px;
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows: 1fr 12fr 6fr 6fr;
+    row-gap: 0px;
+}
+
+/* Empieza la definición de Header */
+
+/* es la barra superior blanca (un div) que contiene al logo de la izquierda y los links a la derecha */
+.header
+{
+    background-color: white;
+     /* height: 60px;  */
+    /* width: 99.75%; */
+    font-family: 'Montserrat', sans-serif;
+    /* border-style: dotted;
+    border-color:red; */
+    display: flex;
+    align-items: stretch;
+    min-height: 70px;
+    max-height: 80px;
+    flex-wrap: nowrap;
+}
+
+@media (max-width: 1000px)
+{
+    .header
+    {
+        font-family: 'Montserrat', sans-serif;
+        font-size:small;
+        display: flex;
+        /* align-items: self-start; */
+        justify-content: stretch;
+        min-height: 70px;
+        max-height: 80px;
+        flex-wrap: nowrap;
+    }
+
+    .header #rightSide
+    {
+        display:flex;
+        justify-content: flex-end;
+        /* position:absolute; */
+        /* float: right; */
+        /* padding-right: 2%; */
+    }
+
+    .header #rightSide #text
+    {
+        text-align: right;
+        /* padding-right: 38px; */
+    }
+
+    .inicio_explanation #explanation_right
+    {
+        padding-top:0%; 
+        width:25%;
+    }
+
+    .inicio_explanation #explanation_right #title
+    {
+        font-size:medium;
+    }
+
+    .inicio_explanation #explanation_right #text
+    {
+        font-size:small;
+        width: auto;
+        overflow-wrap: break-word;
+        hyphens: manual;
+        
+    }
+}
+
+/* definición específica sobre un inline contenido en header, alineado a izquierda */
+.header #leftSide
+{
+    align-items: stretch;
+    flex-basis:370px;
+    /* float: left; */
+    padding-left: 2%;
+    margin-right: 4%;
+    /* width:370px; */
+    /* border-style: dotted;
+    border-color:red; */
+}
+
+/* definición específica sobre un inline contenido en el inline de leftside, que tiene el logo */
+.header #leftSide #headerLogo
+{
+    flex-basis: auto;
+    padding-right: 0.5%;
+    /* float:left; */
+}
+
+.header_image 
+{
+    padding-top: 3.25%;
+}
+
+/* definición específica sobre un inline contenido en el inline de leftside, que tiene el el título principal a la derecha del logo */
+.header #leftSide #headerTitle
+{
+    /* border-style: dashed; */
+    position: absolute;
+    top: 28px;
+    /* left:5.25%; */
+    /* display:inline-block; */
+    text-align: center;
+    /* border-style: dotted;
+    border-color:violet; */
+    float:inline-end;
+}
+
+/* definición específica sobre un inline contenido en header, alineado a derecha */
+.header #rightSide
+{
+    /* border-style: dotted; */
+    align-items: stretch;
+    flex-basis:600px;
+    position:absolute;
+    top:28px;
+    right:0.5%;
+    float: right;
+    /* padding-right: 2%; */
+    width:600px;
+    /* border-style: dotted;
+    border-color:red; */
+}
+
+/* definición específica sobre un inline contenido en el inline de rightside, que tiene los links */
+.header #rightSide #text
+{
+    text-align: right;
+    padding-right: 38px;
+}
+
+/* Esta es la parte que no me está funcionando: los colores de los links  */
+a:link
+{
+    color:#C5A000;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color:red;
+}
+
+a:visited
+{
+    color:#957900;
+    text-decoration: none;
+}
+
+/* Empieza la definición del Footer */
+
+/* el footer es (un div) la barra inferior ancha, que contiene links y algunas cosas más */
+#footer
+{
+    font-family: 'Montserrat', sans-serif;
+    /* border-style: dotted;
+    border-color:red; */
+    display: flex;
+    align-items:stretch;
+    justify-content: space-around;
+    min-height: 450px;
+    max-height: 500px;
+    flex-wrap: nowrap;
+    flex-direction:column;
+}
+
+/* dicho footer contiene esencialmente 3 divs apilados, siendo el primero de altura 300px */
+.footerStart
+{
+    flex-basis:200px;
+    max-height: 250px;
+    display:flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-left:80px;
+    margin-right:80px;
+
+}
+
+/* el inicio del footer tiene varios elementos ordenados lateralmente, primero el mismo logo que el header, aunque más grande. */
+.footerLogo
+{
+    /* size: 105px; */
+    /* height:120px; */
+    /* flex-basis: 150px ; */
+    /* display:inline-block; */
+    /* border-style: dotted;
+    border-color:violet; */
+    /* padding-top:100px; */
+    /* padding-left:80px; */
+    margin-right:20%;
+
+} 
+
+/* el inicio del footer tiene además ciertos links apilados, que por ahora llevan a ninguna parte, así que son sólo texto. */
+.navigationLinks
+{
+    display:inline-block;
+    /* float:right; */
+    /* right:500px; */
+    /* border-style: dotted;
+    border-color:blueviolet; */
+    /* padding-left:150px;
+    padding-top:120px; */
+}
+
+/* además, creo un spacer, que es simplemente un bloque lateral que genera espacio desde la derecha */
+/* !!! PUEDE QUE ESTO SE SOLUCIONE DE OTRA FORMA MÁS SENCILLA, QUE NO SEA CON BOX MODELLING !!!*/
+#rightSpacer
+{
+    /* border-style: dotted;
+    border-color:blueviolet; */
+    /* display:inline-block; */
+    float:right;
+    width:300px;
+    height:290px;
+} 
+
+/* justo debajo del inicio del footer hay una línea divisora, con fines estéticos. */
+.divisor
+{
+    /* border-style: dotted;
+    border-color:red; */
+    /* width:90%; */
+    padding-left:80px;
+    padding-right:80px;
+}
+
+/* el final del footer es solamente un div de cierta altura, con fondo blanco */
+.footerEnd
+{
+    background-color: white;
+    display:flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-left:80px;
+    margin-right:80px;
+}
+
+/* en la parte izquierda del final del footer hay un copyright falso */
+.footerEnd #leftSide
+{
+    /* border-style: dotted;
+    border-color:red; */
+    float: left;
+    padding-top: 2%;
+    height:60px;
+
+}
+
+/* y del lado derecho una barra de social media */
+.footerEnd #rightSide
+{
+    /* border-style: dotted;
+    border-color:red; */
+    float: right;
+    padding-left: 4%;
+    padding-top: 2%;
+    width: 380px;
+    height:60px;
+}
+
+/* dicho social media tiene una descripción "Nuestras redes: " */
+.footerEnd #rightSide #footerText
+{
+    /* border-style: dotted;
+    border-color:violet; */
+    float:left;
+    /* position:absolute; */
+    /* bottom:133px; */
+    /* right:337px; */
+    height: 20px;
+}
+
+/* y los links a las distintas redes sociales son imágenes representativas de dichas redes sociales */
+.footerEnd #rightSide #footerImgLink
+{
+    /* border-style: dotted;
+    border-color:violet; */
+    float:right;
+    position:relative;
+    padding-right:10px;
+    bottom:16px;
+}
+
+/* Empieza la definición de estilos específicos para index */
+
+/* Lo primero que aparece en index, debajo del header, es un div que contiene una imagen, que no debería tener bordes */
+.inicio_img
+{
+    
+    height: 740px;
+    grid-row-start:auto;
+    display:block;
+}
+
+.myImage
+{
+    display: block;
+    max-width:100%;
+    max-height:900px;
+    width: auto;
+    height: auto;
+}
+
+/* Acá está el inicio de la explicación que hay en index, siendo un div, debajo de la imagen de las escaleras mecánicas. */
+.inicio_explanation 
+{
+    align-self: auto;
+    margin: 0px;
+    border: 0px solid;
+    padding: 0px;
+    /* height:60%; */
+    background-color:black;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    align-items:center;
+    justify-content: space-between;
+}
+
+/* en ese div hay contenido un inline alineado a la izquierda, que es un contenedor de imagen */
+#explanation_left
+{
+    flex-grow:4;
+    height:100%;
+    width:45%;
+    padding-top:0%;
+    padding-left:0%;
+    display:inline-block;
+    /* float:left; */
+    /* bottom:80px; */
+    /* border-style: dotted;
+    border-color:blue; */
+    display:flex;
+    align-items:center;
+}
+
+/* necesito especificar cosas en esta imagen, como si fuera una clase aparte. */
+.image_format
+{
+    display:flex;
+    margin-left:auto;
+    margin-right:auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width:75%;
+    align-self: auto; 
+}
+
+/* en ese div hay contenido un inline alineado a la izquierda, que contiene texto */
+#explanation_right
+{
+    
+    display:inline-block;
+    flex-grow:5;
+    /* height:60%; */
+    /* width:55%; */
+    padding-top:5%; 
+    padding-left:0%;
+    /* padding-bottom:50px;
+    float:right;
+    display:inline-block;
+    border-style: dotted;
+    margin-top: 15%;*/
+    /* border-style: dotted;
+    border-color:purple; */
+    
+    /* margin-top:10%; */
+}
+
+/* en ese bloque de texto, hay un título, que tiene un estilo particular */
+#explanation_right #title
+{
+    /* border-style: dotted;
+    border-color:violet; */
+    font-family: 'Montserrat', sans-serif;
+    width:525px;
+    float:inline-start;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #F6CD19;
+}
+
+/* en ese bloque de texto, hay un cuerpo de texto, que tiene otro estilo. */
+#explanation_right #text
+{
+    /* border-style: dotted;
+    border-color:violet; */
+    font-family: 'Montserrat', sans-serif;
+    width:525px;
+    float:inline-start;
+    padding-top:35px;
+    /* top:15%; */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color:#C5A000;
+}
+
+body
+{
+    margin: 0px;
+    border: 0px solid;
+    padding: 0px;
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows: 1fr 1fr 6fr 6fr;
+    row-gap: 0px;
+}
+
+/* Empieza la definición de estilos específicos para estado_me */
+.firstTitle
+{
+    grid-row-start:auto;
+    max-height:150px;
+}
+
+.firstTitleHeader
+{   
+    margin-left:80px;
+    margin-right:80px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.tableContainer
+{
+    grid-row-start:auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:100px;
+
+}
+

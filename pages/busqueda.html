@@ -1,0 +1,220 @@
+<!-- Al igual que index, búsqueda tiene que tener un head y body, además de especificar que está descripto en HTML -->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- head time -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda</title>
+    <!-- Styling -->
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<!-- body time -->
+<body>
+    <!-- se repiten el header y el footer de antes. -->
+
+
+
+    <!-- header time -->
+    <section id="header">
+        <div class="header">
+            <span id="leftSide">
+                <span id="headerLogo">
+                    <!-- Añado el logo -->
+                    <img src="../img/subte_small.png" alt="header_logo" class="header_image">
+                </span>
+                <span id="headerTitle">
+                    <!-- Añado el título al lado del logo -->
+                    Subterráneos de Buenos Aires
+                </span>
+            </span>
+            <span id="rightSide">
+                <span id="text">
+                    <!-- Añado el primer link (Inicio) -->
+                    <a href="index.html">
+                        Inicio
+                    </a>
+                </span>
+                <span id="text">
+                    <!-- Añado el segundo link (Estado ME) -->
+                    <a href="estado_me.html">
+                        Estado ME
+                    </a>
+                </span>
+                <span id="text">
+                    <!-- Añado el tercer link (Mapa) -->
+                    <a href="mapa.html">
+                        Mapa
+                    </a>
+                </span>
+                <span id="text">
+                    <!-- Añado el cuarto link (Búsqueda) -->
+                    <a href="busqueda.html">
+                        Búsqueda
+                    </a>
+                </span>
+                <span id="text">
+                    <!-- Añado el quinto link (Contacto) -->
+                    <a href="contacto.html">
+                        Contacto
+                    </a>
+                </span>
+            </span>
+        </div>
+    </section>
+
+
+
+    <!-- Luego del "header" continúo con el título -->
+    <section id="busqueda_title">
+        <!-- como habrá una sección del mismo estilo en distintas páginas, pienso en darle el mismo estilo a las 3, eso implica mismo ID para el CSS-->
+        <div id="firstTitleHeader">
+            <h1>
+                Búsqueda
+            </h1>
+        </div>
+        <div class="divisor">
+            <!-- Acá hay un divisor horizontal -->
+            <hr>
+        </div>
+    </section>
+
+
+
+    <!-- A continuación un buscador que te deja averiguar sobre un medio en particular -->
+    <section id="busqueda_busqueda">
+        <div id="searchContainer">
+            <!-- Breve título que te indica buscar -->
+            <div id="searchHeader">
+                <h2>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                </h2>
+            </div>
+            <!-- Acá se crea una caja centrada con borde -->
+            <div id="searchBox">
+                <!-- Tiene un título nuevamente -->
+                <div id="searchBoxTitle">
+                    <h3>
+                        Lorem Ipsum:
+                    </h3>
+                </div>
+                <!-- Tiene un campo donde se introduce en forma de texto la línea y la estación e.g.:"A San pedrito" -->
+                <div id="searchBoxTextbox">
+                    <p>
+                        Línea/estación
+                    </p>
+                </div>
+                <!-- Tiene un segundo campo donde se especifica si es escalera o ascensor, que es mejor tenerlo como doble checkbox -->
+                <div id="searchBoxTextbox">
+                    <p>
+                        Escalera/ascensor
+                    </p>
+                </div>
+                <!-- Hay un botón de "Buscar" -->
+                <div id="searchBoxButton">
+                    <p>
+                        Buscar!
+                    </p>
+                </div>
+            </div>
+        </div>    
+    </section>
+
+
+
+    <!-- footer time -->
+    <section id="footer">
+        <!-- Primero viene el logo a la izquierda, y una serie de links de navegación a la derecha (por ahora de prueba) -->
+        <div class="footerStart">
+            <span class="footerLogo">
+                <img src="../img/subte_big.png">
+            </span>
+
+            <span class="navigationLinks">
+                <div class="title">
+                    Lorem ipsum
+                </div>
+                <div>
+                    Adipiscing
+                </div>
+                <div>
+                    Tempo
+                </div>
+                <div>
+                    Et dolore
+                </div>
+            </span>
+
+            <span class="navigationLinks">
+                <div class="title">
+                    Dolor sit amet
+                </div>
+                <div>
+                    Elit, sed do
+                </div>
+                <div>
+                    Incididunt
+                </div>
+                <div>
+                    magna
+                </div>
+            </span>
+
+            <span class="navigationLinks">
+                <div class="title">
+                    Consectetur
+                </div>
+                <div>
+                    Eiusmod
+                </div>
+                <div>
+                    Ut labore
+                </div>
+                <div>
+                    Aliqua
+                </div>
+            </span>
+        </div>
+        <!-- Luego viene una línea divisoria -->
+        <div class="divisor">
+            <hr>
+        </div>
+        <!-- Finalmente vienen los créditos y los links de las redes sociales -->
+        <div class="footerEnd">
+            <span id="leftSide">
+                &copy; SBASE 2023.
+            </span>
+            <span id="rightSide">
+                <span id="footerText">
+                    Nuestras redes:
+                </span>
+                <span id="footerImgLink">
+                    <a href="https://www.Facebook.com">
+                        <img src="../img/facebook_png.png" alt="Facebook" style="width:42px;height:42px;">
+                    </a>
+                </span>
+                <span id="footerImgLink">
+                    <a href="https://www.Instagram.com">
+                        <img src="../img/instagram_png.png" alt="Instagram" style="width:42px;height:42px;">
+                    </a>
+                </span>
+                <span id="footerImgLink">
+                    <a href="https://www.Linkedin.com">
+                        <img src="../img/linkedin_png.png" alt="Linkedin" style="width:42px;height:42px;">
+                    </a>
+                </span>
+                <span id="footerImgLink">
+                    <a href="https://www.Twitter.com">
+                        <img src="../img/twitter_png.png" alt="Twitter" style="width:42px;height:42px;">
+                    </a>
+                </span>
+            </span>
+        </div>
+    </section>
+
+    <!-- Al terminar la última sección cierro el body y el html -->
+</body>
+</html>
