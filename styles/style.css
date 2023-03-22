@@ -2,7 +2,7 @@
 
 /* Empieza la definición del body, usado por todas las páginas. */
 
-/* el body, contenedor de todos estos bloques, no debería tener border margin ni padding. Además SIEMPRE SERÁ un grid container*/
+/* el body, contenedor de todos estos bloques, no debería tener border margin ni padding. Además en el caso de index.html SIEMPRE SERÁ un grid container*/
 .index
 {
     margin: 0px;
@@ -14,8 +14,8 @@
     row-gap: 0px;
 }
 
-/* Empieza la definición de Header */
-
+/* Empieza la definición del Header */
+/* Implemento flex en el header y en el footer, por lo tanto todas las páginas de mi sitio usarán flex al menos en parte. */
 /* es la barra superior blanca (un div) que contiene al logo de la izquierda y los links a la derecha */
 .header
 {
