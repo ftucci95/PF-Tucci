@@ -10,7 +10,7 @@
     padding: 0px;
     display:grid;
     grid-template-columns:1fr;
-    grid-template-rows: 1fr 12fr 6fr 6fr;
+    grid-template-rows: 1fr 9fr 6fr 6fr;
     row-gap: 0px;
 }
 
@@ -154,7 +154,8 @@ a:link
 
 a:hover
 {
-    color:red;
+    /* acá debería venir una animación */
+    
 }
 
 a:visited
@@ -306,19 +307,18 @@ a:visited
 /* Lo primero que aparece en index, debajo del header, es un div que contiene una imagen, que no debería tener bordes */
 .inicio_img
 {
-    
-    height: 740px;
+    width: 100%;
     grid-row-start:auto;
-    display:block;
+    display:flex;
 }
 
 .myImage
 {
-    display: block;
-    max-width:100%;
-    max-height:900px;
-    width: auto;
-    height: auto;
+    object-fit: cover;
+    width:100%;
+    /* max-height:900px; */
+    /* width: auto; */
+    /* height: auto; */
 }
 
 /* Acá está el inicio de la explicación que hay en index, siendo un div, debajo de la imagen de las escaleras mecánicas. */
@@ -421,7 +421,7 @@ a:visited
     color:#C5A000;
 }
 
-body
+/* body
 {
     margin: 0px;
     border: 0px solid;
@@ -430,7 +430,7 @@ body
     grid-template-columns:1fr;
     grid-template-rows: 1fr 1fr 6fr 6fr;
     row-gap: 0px;
-}
+} */
 
 /* Empieza la definición de estilos específicos para estado_me */
 .firstTitle
@@ -460,3 +460,45 @@ body
 
 }
 
+.busqueda_busqueda
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:100px;
+    padding-left:80px;
+    padding-right:80px;
+}
+
+.contact_cards
+{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    margin-top:100px;
+    padding-left:80px;
+    padding-right:80px;
+}
+.contact_contact
+{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    margin-top:100px;
+    padding-left:80px;
+    padding-right:80px;
+}
+
+.contact_text
+{
+    margin-left:10px;
+    margin-right:20px;
+}
+
+.contact_img
+{
+    margin-left:10px;
+}
