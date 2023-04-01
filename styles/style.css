@@ -314,7 +314,6 @@ a:visited
 /* Acá está el inicio de la explicación que hay en index, siendo un div, debajo de la imagen de las escaleras mecánicas. */
 .inicio_explanation 
 {
-    align-self: auto;
     margin: 0px;
     border: 0px solid;
     padding: 0px;
@@ -335,7 +334,7 @@ a:visited
     width:45%;
     padding-top:0%;
     padding-left:0%;
-    display:inline-block;
+    /* display:inline-block; */
     /* float:left; */
     /* bottom:80px; */
     /* border-style: dotted;
@@ -364,7 +363,7 @@ a:visited
     flex-grow:5;
     /* height:60%; */
     /* width:55%; */
-    padding-top:5%; 
+    padding-top:20px; 
     padding-left:0%;
     /* padding-bottom:50px;
     float:right;
@@ -630,4 +629,28 @@ a:visited
         flex-wrap: wrap;
         margin-top:10px;
     }
+
+    .inicio_explanation 
+    {
+        margin: 0px;
+        border: 0px solid;
+        padding: 0px;
+        flex-direction: column;
+        /* flex-wrap:wrap; */
+        align-items:center;
+        justify-content: space-between;
+    }
+
+    .inicio_explanation #explanation_left
+    {
+        width: 100%;
+        margin-left:10%;
+        margin-right:10%;
+    }
+
+    .inicio_explanation #explanation_right
+    {
+        width: 90%;
+    }
+
 }
