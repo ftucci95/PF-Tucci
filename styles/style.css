@@ -489,10 +489,10 @@ a:visited
     justify-content:center;
 }
 
-.searchBoxButton
+/* .searchBoxButton
 {
-    /* width:200px; */
-}
+    width:200px;
+} */
 
 .searchBoxContainer
 {
