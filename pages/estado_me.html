@@ -25,7 +25,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <!-- se repiten el header y el footer de antes. -->
-    
+
     <!-- header time -->
     <section id="header">
         <div class="header">
@@ -96,7 +96,56 @@
     <!-- A continuación la tabla que contiene el estado en tiempo real de escaleras y ascensores de todas las líneas (aún falta completar la tabla) -->
     <section id="estado_me_tabla">
         <div class="container">
-            <table class="table">
+            <button class="collapsibleVader"><h2>Línea A:</h2></button>
+            <div class="content">
+                <button class="collapsibleKinder">San Pedrito</button>
+                <div class="content">
+                    <table class="table">
+                        <tr>
+                            <th>Medio de elevación</th>
+                            <th>Estado</th>
+                        </tr>
+                        <tr>
+                            <td>Escalera N</td>
+                            <td>Funcional</td>
+                        </tr>
+                        <tr>
+                            <td>Escalera S</td>
+                            <td>No supervisado</td>
+                        </tr>
+                        <tr>
+                            <td>Escalera 1</td>
+                            <td>En falla</td>
+                        </tr>
+                        <tr>
+                            <td>Escalera 2</td>
+                            <td>En falla</td>
+                        </tr>
+                        <tr>
+                            <td>Escalera 3</td>
+                            <td>En falla</td>
+                        </tr>
+                        <tr>
+                            <td>Ascensor 1</td>
+                            <td>En falla</td>
+                        </tr>
+                        <tr>
+                            <td>Ascensor 2</td>
+                            <td>En falla</td>
+                        </tr>
+                    </table>
+                </div>
+                <button class="collapsibleKinder">Open Section 2</button>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <button class="collapsibleKinder">Open Section 3</button>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+            
+            <!-- <table class="table">
                 <tr>
                   <th>Estación</th>
                   <th>Medio de elevación</th>
@@ -117,7 +166,7 @@
                     <td>Ascensor 1</td>
                     <td>En falla</td>
                   </tr>
-              </table>
+              </table> -->
         </div>
     </section>
 
@@ -218,5 +267,7 @@
     </section>
 
     <!-- Al terminar la última sección cierro el body y el html -->
+    <!-- Antes de terminar el body añado el JS -->
+    <script src="../js/ME_js.js"> </script>
 </body>
 </html>
