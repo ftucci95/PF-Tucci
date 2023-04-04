@@ -6,7 +6,27 @@ $SbaseColor2: #957900;
 $SbaseColor3: #F6CD19;
 $SbaseFont: 'Montserrat', sans-serif;
 
+// Mixins:
+@mixin sizes($width, $height) {
+    height: $height;
+    width: $width;
+ }
 
+ @mixin minmaxheight($minheight, $maxheight) {
+    min-height: $minheight;
+    max-height: $maxheight;
+ }
+
+ @mixin LRmargins($lMargin, $rMargin) {
+    margin-left: $lMargin;
+    margin-right: $rMargin;
+ }
+ 
+ @mixin TBmargins($tMargin,$bMargin) {
+    margin-top: $tMargin;
+    margin-bottom: $bMargin;
+ }
+ 
 /* Empieza la definición del body, usado por todas las páginas. */
 
 /* el body, contenedor de todos estos bloques, no debería tener border margin ni padding. */
@@ -28,17 +48,14 @@ $SbaseFont: 'Montserrat', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    min-height: 70px;
-    max-height: 120px;
+    @include minmaxheight(70px, 120px);
     flex-wrap: wrap;
     margin: 10px;
 }
 /* definición específica sobre un inline contenido en header, alineado a izquierda */
 .leftSide
 {
-    align-items: stretch;
-    margin-left: 2%;
-    margin-right: 4%;
+    @include LRmargins(2%, 4%);
     display:flex;
     justify-items: space-between;
     align-items: center;
@@ -65,8 +82,7 @@ $SbaseFont: 'Montserrat', sans-serif;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    @include TBmargins(20px, 20px);
     margin-right:0.5%;
 
     /* definición específica sobre un inline contenido en el inline de rightside, que tiene los links */
@@ -112,8 +128,7 @@ a
     justify-content: space-around;
     flex-wrap: nowrap;
     flex-direction:column;
-    margin-top: 20px;
-    margin-bottom:20px;
+    @include TBmargins(20px, 20px);
 }
 
 /* dicho footer contiene esencialmente 3 divs apilados, siendo el primero de altura 300px */
@@ -123,8 +138,7 @@ a
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    margin-left:80px;
-    margin-right:80px;
+    @include LRmargins(80px, 80px);
 }
 
 /* el inicio del footer tiene varios elementos ordenados lateralmente, primero el mismo logo que el header, aunque más grande. */
@@ -152,8 +166,7 @@ a
 /* justo debajo del inicio del footer hay una línea divisora, con fines estéticos. */
 .divisor
 {
-    padding-left:80px;
-    padding-right:80px;
+    @include LRmargins(80px, 80px);
     margin-top: 20px;
 }
 
@@ -165,8 +178,7 @@ a
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
-    margin-left:80px;
-    margin-right:80px;
+    @include LRmargins(80px, 80px);
     margin-top:20px;
     
     /* en la parte izquierda del final del footer hay un copyright falso */
@@ -200,8 +212,7 @@ a
 {
     display:flex;
     align-items: center;
-    margin-left:5px;
-    margin-right:5px;
+    @include LRmargins(5px, 5px);
 }
 
 
@@ -219,9 +230,6 @@ a
 {
     object-fit: cover;
     width:100%;
-    /* max-height:900px; */
-    /* width: auto; */
-    /* height: auto; */
 }
 
 /* Acá está el inicio de la explicación que hay en index, siendo un div, debajo de la imagen de las escaleras mecánicas. */
@@ -242,8 +250,7 @@ a
 #explanation_left
 {
     flex-grow:4;
-    height:100%;
-    width:45%;
+    @include sizes(45%, 100%);
     padding-top:0%;
     padding-left:0%;
     display:flex;
@@ -256,8 +263,7 @@ a
     display:flex;
     margin-left:auto;
     margin-right:auto;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    @include TBmargins(5%, 5%);
     width:75%;
     align-self: auto; 
 }
@@ -309,8 +315,7 @@ a
 
 .firstTitleHeader
 {   
-    margin-left:80px;
-    margin-right:80px;
+    @include LRmargins(80px, 80px);
     font-family: $SbaseFont;
     font-style: normal;
     font-weight: 400;
@@ -334,8 +339,7 @@ a
     align-items: center;
     justify-content: center;
     margin-top:100px;
-    padding-left:80px;
-    padding-right:80px;
+    @include LRmargins(80px, 80px);
 }
 
 .searchContainer
@@ -383,9 +387,9 @@ a
     align-items: center;
     justify-content: center;
     margin-top:150px;
-    padding-left:80px;
-    padding-right:80px;
+    @include LRmargins(80px, 80px);
 }
+
 .contact_contact
 {
     display:flex;
@@ -393,16 +397,13 @@ a
     flex-direction:row;
     align-items: center;
     justify-content: center;
-    margin-top:100px;
-    padding-left:80px;
-    padding-right:80px;
-    margin-bottom:300px;
+    @include LRmargins(80px, 80px);
+    @include TBmargins(100px, 300px);
 }
 
 .contact_text
 {
-    margin-left:10px;
-    margin-right:20px;
+    @include LRmargins(10px, 20px);
 }
 
 .contact_img
@@ -419,8 +420,7 @@ a
         font-size:small;
         display: flex;
         justify-content: space-between;
-        min-height: 70px;
-        max-height: 80px;
+        @include minmaxheight(70px, 80px);
         flex-wrap: wrap;
     }
 
@@ -520,8 +520,7 @@ a
         flex-shrink: 3;
         flex-wrap: wrap;
         justify-content: flex-end;
-        margin-top:0px;
-        margin-bottom:0px;
+        @include TBmargins(0px, 0px);
     
         #text
         {
@@ -552,8 +551,7 @@ a
         #explanation_left
         {
             width: 100%;
-            margin-left:10%;
-            margin-right:10%;
+            @include LRmargins(10%, 10%);
         }
 
         #explanation_right
