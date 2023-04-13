@@ -61,14 +61,14 @@ $SbaseFont: 'Montserrat', sans-serif;
     align-items: center;
 
     /* definición específica sobre un inline contenido en el inline de leftside, que tiene el logo */
-    #headerlogo
+    .headerlogo
     {
         flex-basis: auto;
         padding-right: 0.5%;
     }
 
     /* definición específica sobre un inline contenido en el inline de leftside, que tiene el el título principal a la derecha del logo */
-    .leftSide #headerTitle
+    .headerTitle
     {
         padding-left: 10px;
     }
@@ -86,7 +86,7 @@ $SbaseFont: 'Montserrat', sans-serif;
     margin-right:0.5%;
 
     /* definición específica sobre un inline contenido en el inline de rightside, que tiene los links */
-    #text
+    .text
     {
         text-align: right;
         padding-right: 38px;
@@ -182,7 +182,7 @@ a
     margin-top:20px;
     
     /* en la parte izquierda del final del footer hay un copyright falso */
-    #leftSide
+    .footerLeftSide
     {
         display:flex;
         justify-content: center;
@@ -190,7 +190,7 @@ a
     }
 
     /* y del lado derecho una barra de social media */
-    #rightSide
+    .footerRightSide
     {
         display:flex;
         align-content: center;
@@ -247,7 +247,7 @@ a
 }
 
 /* en ese div hay contenido un inline alineado a la izquierda, que es un contenedor de imagen */
-#explanation_left
+.explanation_left
 {
     flex-grow:4;
     @include sizes(45%, 100%);
@@ -269,7 +269,7 @@ a
 }
 
 /* en ese div hay contenido un inline alineado a la izquierda, que contiene texto */
-#explanation_right
+.explanation_right
 {
     
     display:inline-block;
@@ -429,13 +429,13 @@ a
         display:flex;
         justify-content: flex-end;
     
-        #text
+        .text
         {
             text-align: right;
         }
     }
 
-    .inicio_explanation #explanation_right
+    .inicio_explanation .explanation_right
     {
         padding-top:0%; 
         width:25%;
@@ -486,7 +486,7 @@ a
         max-height: 150px;
     }
 
-    .rightSide #text
+    .rightSide .text
     {
         text-align: right;
     }
@@ -500,7 +500,7 @@ a
         justify-items: space-between;
         align-items: center;
 
-        #headerTitle
+        .headerTitle
         {
             padding-left: 0px;
             flex-basis: 0px;
@@ -522,7 +522,7 @@ a
         justify-content: flex-end;
         @include TBmargins(0px, 0px);
     
-        #text
+        .text
         {
             margin-top:10px;
         }
@@ -548,13 +548,13 @@ a
         align-items:center;
         justify-content: space-between;
     
-        #explanation_left
+        .explanation_left
         {
             width: 100%;
             @include LRmargins(10%, 10%);
         }
 
-        #explanation_right
+        .explanation_right
         {
             width: 90%;
         }
