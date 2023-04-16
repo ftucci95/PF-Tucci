@@ -2,8 +2,15 @@
 
 // Variables!!
 $SbaseColor: #C5A000;
-$SbaseColor2: #957900;
+$SbaseColor2: #dbb91e;
 $SbaseColor3: #F6CD19;
+$LineaAColor: #07B5D8;
+$LineaBColor: #C31D21;
+$LineaCColor: #0F6EB0;
+$LineaDColor: #01836B;
+$LineaEColor: #78318D;
+$LineaHColor: #FED102;
+$blackColor: #000;
 $SbaseFont: 'Montserrat', sans-serif;
 
 // Mixins:
@@ -93,6 +100,11 @@ $SbaseFont: 'Montserrat', sans-serif;
     }
 }
 
+.myIcon
+{
+    display:none;
+}
+
 /* Esta es la parte que no me está funcionando: los colores de los links  */
 a
 {
@@ -114,6 +126,45 @@ a
     {
         color: $SbaseColor2;
         text-decoration: underline;
+    }
+}
+
+/* Esta es la parte que ahora sí está funcionando: los colores de los links  */
+.myLink
+{
+    &:link
+    {
+    font-weight: bold;
+    color: $SbaseColor;
+    text-decoration: none; 
+    }
+    &:hover 
+    {
+    /* este es el único lugar donde pareció obligatorio meter un !important ... por haberle dicho text-decoration:none en myLink:link. */
+    text-decoration: underline !important; 
+    }
+    &:visited 
+    {
+    color: $SbaseColor2;
+    }
+}
+
+.myLink2
+{
+    &:link
+    {
+    color: $blackColor;
+    text-decoration: none; 
+    }
+    &:hover 
+    {
+    /* este es el único lugar donde pareció obligatorio meter un !important ... por haberle dicho text-decoration:none en myLink2:link. */
+    text-decoration: underline !important; 
+    }
+    &:visited
+    {
+    color: $blackColor;
+    text-decoration: none; 
     }
 }
 
@@ -333,6 +384,139 @@ a
 
 }
 
+/* Adición FALOPA */
+
+.collapsible
+{
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+
+    &:after
+    {
+        content: '\002B';
+        color: white;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+    }
+
+    &:hover 
+    {
+        background-color: #555;
+    }
+}
+
+.myLineA
+{
+    background-color: $LineaAColor !important;
+}
+
+.myLineB
+{
+    background-color: $LineaBColor !important;
+}
+
+.myLineC
+{
+    background-color: $LineaCColor !important;
+}
+
+.myLineD
+{
+    background-color: $LineaDColor !important;
+}
+
+.myLineE
+{
+    background-color: $LineaEColor !important;
+}
+
+.myLineH
+{
+    background-color: $LineaHColor !important;
+    color:$blackColor !important; 
+}
+  
+.active
+{
+    &:after 
+    {
+        content: "\2212";
+    }
+    &:hover 
+    {
+        background-color: #555;
+    }
+}
+
+.content
+{
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+
+th
+{
+    padding: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    background: #6c7ae0;
+    text-align: left;
+    font-weight: normal;
+    font-size: 1.1rem;
+    color: white;
+
+    &:last-child 
+    {
+        border: 0;
+    }
+}
+
+td 
+{
+    padding: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #808080;
+}
+  
+tr:nth-child(even) td
+{
+    background: #f8f6ff;
+}
+  
+table {
+    display: grid;
+    min-width: 100%;
+    justify-items: stretch;
+    align-items:center;
+    grid-template-columns:
+    minmax(150px, 1fr)
+    minmax(150px, 1.67fr)
+    minmax(150px, 1.67fr);
+}
+
+thead, tbody, tr 
+{
+    display:contents;
+}
+
 .busqueda_busqueda
 {
     display:flex;
@@ -511,21 +695,45 @@ a
 
 @media (max-width: 600px)
 {
+    .header
+    {
+        align-items: center;
+        max-height: 250px;
+    }
+
+    .topnav
+    {
+        display:block !important;
+        min-width: 162px;
+        min-height: 54px;
+
+    }
+
+    .firstTitle
+    {
+        min-height:200px;
+    }
     .rightSide
     {
-        display:flex;
-        flex-direction: column;
-        align-items: flex-end;
-        flex-basis: auto;
-        flex-shrink: 3;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        @include TBmargins(0px, 0px);
+        // display:flex;
+        // flex-direction: column;
+        // align-items: flex-end;
+        // flex-basis: auto;
+        // flex-shrink: 3;
+        // flex-wrap: wrap;
+        // justify-content: flex-end;
+        // @include TBmargins(0px, 0px);
+        display:none;
     
         .text
         {
             margin-top:10px;
         }
+    }
+
+    .myIcon
+    {
+        display:inline-block;
     }
 
     .footerText
@@ -560,3 +768,46 @@ a
         }
     }
 }
+
+/* Style the navigation menu */
+.topnav {
+    display:none;
+    overflow: hidden;
+    background-color: white;
+    position: relative;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+    color: $SbaseColor;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 12px;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: white;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: $SbaseColor2;
+    color: black;
+  }
+  
+  /* Style the active link (or home/logo) */
+  .active {
+    background-color: #04AA6D;
+    color: $SbaseColor;
+  }

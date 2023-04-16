@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="../styles/style.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- menú burger king -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <!-- body time -->
@@ -44,35 +46,50 @@
             <span class="rightSide">
                 <span class="text">
                     <!-- Añado el primer link (Inicio) -->
-                    <a href="../index.html">
+                    <a class="myLink" href="../index.html">
                         Inicio
                     </a>
                 </span>
                 <span class="text">
                     <!-- Añado el segundo link (Estado ME) -->
-                    <a href="estado_me.html">
+                    <a class="myLink" href="estado_me.html">
                         Estado ME
                     </a>
                 </span>
                 <span class="text">
                     <!-- Añado el tercer link (Mapa) -->
-                    <a href="mapa.html">
+                    <a class="myLink" href="mapa.html">
                         Mapa
                     </a>
                 </span>
                 <span class="text">
                     <!-- Añado el cuarto link (Búsqueda) -->
-                    <a href="busqueda.html">
+                    <a class="myLink" href="busqueda.html">
                         Búsqueda
                     </a>
                 </span>
                 <span class="text">
                     <!-- Añado el quinto link (Contacto) -->
-                    <a href="contacto.html">
+                    <a class="myLink" href="contacto.html">
                         Contacto
                     </a>
                 </span>
             </span>
+            <!-- Burger king! -->
+            <div class="topnav">
+                <!-- Navigation links (hidden by default) -->
+                <div id="myLinks">
+                <a href="../index.html">Inicio</a>
+                <a href="estado_me.html">Estado ME</a>
+                <a href="mapa.html">Mapa</a>
+                <a href="busqueda.html">Búsqueda</a>
+                <a href="contacto.html">Contacto</a>
+                </div>
+                <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                <a href="javascript:void(0);" class="icon active" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -152,47 +169,38 @@
 
             <span class="navigationLinks">
                 <div class="title">
-                    Lorem ipsum
+                    Wikipedia
                 </div>
-                <div>
-                    Adipiscing
-                </div>
-                <div>
-                    Tempo
-                </div>
-                <div>
-                    Et dolore
-                </div>
+                <a class="myLink2" href="https://es.wikipedia.org/wiki/Subte_de_Buenos_Aires">
+                    Subterráneos BA
+                </a> <br>
+                <a class="myLink2" href="https://es.wikipedia.org/wiki/Metrov%C3%ADas">
+                    Emova
+                </a>
             </span>
 
             <span class="navigationLinks">
                 <div class="title">
-                    Dolor sit amet
+                    Oficiales
                 </div>
-                <div>
-                    Elit, sed do
-                </div>
-                <div>
-                    Incididunt
-                </div>
-                <div>
-                    magna
-                </div>
+                <a class="myLink2" href="https://buenosaires.gob.ar/subte">
+                    Subterráneos BA
+                </a><br>
+                <a class="myLink2" href="https://emova.com.ar/">
+                    Emova
+                </a>
             </span>
 
             <span class="navigationLinks">
                 <div class="title">
-                    Consectetur
+                    Sobre mí
                 </div>
-                <div>
-                    Eiusmod
-                </div>
-                <div>
-                    Ut labore
-                </div>
-                <div>
-                    Aliqua
-                </div>
+                <a class="myLink2" href="https://www.linkedin.com/in/federico-tucci-859010140/">
+                    Linkedin
+                </a><br>
+                <a class="myLink2" href="https://www.google.com">
+                    Mi primera página web
+                </a>
             </span>
             <!-- <span id="rightSpacer">
             </span> -->
@@ -211,29 +219,29 @@
                     Nuestras redes:
                 </span>
                 <span class="footerImgLink">
-                    <a href="https://www.Facebook.com">
+                    <a href="https://www.facebook.com/BAsubte">
                         <img src="../img/facebook_png.png" alt="Facebook" style="width:42px;height:42px;">
                     </a>
                 </span>
                 <span class="footerImgLink">
-                    <a href="https://www.Instagram.com">
+                    <a href="https://www.instagram.com/basubte/">
                         <img src="../img/instagram_png.png" alt="Instagram" style="width:42px;height:42px;">
                     </a>
                 </span>
                 <span class="footerImgLink">
-                    <a href="https://www.Linkedin.com">
+                    <a href="https://www.linkedin.com/in/federico-tucci-859010140/">
                         <img src="../img/linkedin_png.png" alt="Linkedin" style="width:42px;height:42px;">
                     </a>
                 </span>
                 <span class="footerImgLink">
-                    <a href="https://www.Twitter.com">
+                    <a href="https://twitter.com/basubte">
                         <img src="../img/twitter_png.png" alt="Twitter" style="width:42px;height:42px;">
                     </a>
                 </span>
             </span>
         </div>
     </section>
-
+    <script src="../js/burger.js"> </script>
     <!-- Al terminar la última sección cierro el body y el html -->
 </body>
 </html>
